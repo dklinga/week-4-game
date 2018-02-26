@@ -10,24 +10,23 @@ var losses = 0;
 var numbersSelected = 0;
 var targetNumber = 0;
 
-//new game function set everything to zero
+//new game function set everything to zero gems and random number rerun 
 function newGame() {
-    var numbersSelected = 0;
+    numbersSelected = 0;
     console.log(numbersSelected);
-    $('#score').text(numbersSelected);
+    $("#score").text(numbersSelected);
     targetNumber = Math.floor((Math.random() * 100) + 19);
     $("#randomNumber").text(targetNumber);
     console.log(targetNumber);
-    var diamond = Math.floor((Math.random() * 12) + 1);
+    diamond = Math.floor((Math.random() * 12) + 1);
     console.log(diamond);
-    var emerald = Math.floor((Math.random() * 12) + 1);
+    emerald = Math.floor((Math.random() * 12) + 1);
     console.log(emerald);
-    var ruby = Math.floor((Math.random() * 12) + 1);
+    ruby = Math.floor((Math.random() * 12) + 1);
     console.log(ruby);
-    var yellow = Math.floor((Math.random() * 12) + 1);
+    yellow = Math.floor((Math.random() * 12) + 1);
     console.log(yellow);
 }
-
 
 //pick a random number for game 
 targetNumber = Math.floor((Math.random() * 100) + 19);
@@ -46,7 +45,7 @@ console.log(yellow);
 
 //Alert win 
 function win() {
-    alert("Congrats! You won!");
+    alert("Finn, You won!");
     wins++;
     $("#wins").text(wins);
     newGame();
@@ -54,9 +53,9 @@ function win() {
 
 //Alert lost
 function lost() {
-    alert("Sorry! You lose!");
+    alert("Nuts, You lose!");
     losses++;
-    $('#losses').text(losses);
+    $("#losses").text(losses);
     newGame();
 }
 //Button clicks 
